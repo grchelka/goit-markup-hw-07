@@ -1,0 +1,35 @@
+.nav-contacts {
+    display: $display;
+    align-items: center;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    margin-left: auto;   
+}
+
+.contact {
+        display: $display;
+        align-items: center;
+        color: $thirdly-textcolor;
+        transition: color 250ms $timing-function;
+        margin-right: 30px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+        &:last-child {
+            margin-right: 0px;
+        }
+
+        &:hover,
+        &:focus {
+            color: $accent-color;
+            --color1: #2196F3;
+        }
+
+    .email {
+        margin-right: 10px;
+    }
+    .phone {
+        margin-right: 10px;
+    }
+}
