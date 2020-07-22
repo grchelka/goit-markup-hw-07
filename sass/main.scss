@@ -1,5 +1,6 @@
 @import "./base/normalize";
 @import "./utils/variables";
+@import "./utils/mixins";
 @import "./utils/linkProperties";
 @import "./utils/pageProperties";
 @import "./components/header-container";
@@ -7,7 +8,9 @@
 @import "./components/header-nav";
 @import "./components/header-navcontacts";
 @import "./components/button";
+@import "./components/modal";
 
+//Jumbotron + form-modal
 .jumbotron-wrapper {
     max-width: 1600px;
     height: 600px;
