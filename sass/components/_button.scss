@@ -1,0 +1,25 @@
+.button { 
+    display: block;
+    width: 200px;
+    height: 50px;
+    padding: 10px 32px;
+    border-radius: 4px;
+    margin: 0 auto;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    color: $secondary-textcolor;
+    border-color: transparent;
+    background-color: $accent-color;
+    transition: background-color 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+        background-color: #188ce8;
+        color: $secondary-textcolor;   
+        cursor: pointer;
+        transition: transform 250ms $timing-function;
+        outline: none;
+    }
+}
