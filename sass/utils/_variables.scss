@@ -11,11 +11,15 @@ $thirdly-textcolor: #757575;
 
 $accent-color: #2196F3;
 
+$display: flex;
+$items: "details", "punctuality", "planning", "moderntech"; 
+
 $primary-backgroundcolor: #FFFFFF;
 $secondary-backgroundcolor: #F5F4FA;
 
+$transition-duration: 250ms;
+$transition-delay: 250ms;
 $timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-$display: flex;
-$items: "details", "punctuality", "planning", "moderntech";
+
 

@@ -24,7 +24,7 @@
     border-radius: 4px;
     border-color: transparent; 
     cursor: pointer;
-    transition: transform 250ms &timing-function;
+    transition: transform $transition-duration $timing-function;
 }
 
 @mixin advantageIcons($itemList) {
@@ -45,3 +45,5 @@
     margin-top: 0;
     margin-bottom: 50px;
 }
+
+

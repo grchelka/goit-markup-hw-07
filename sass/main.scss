@@ -136,3 +136,115 @@
     }
 }
 
+//Team 
+.team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    height: 702px;
+    background-color: $secondary-backgroundcolor;
+
+    &-title {
+        @include section-title;
+    }
+
+    &-list {
+        display: $display;
+        width: 1170px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        text-align: center;
+    }
+}
+
+.item-card {
+    width: calc((100% - 90px) / 4);
+    margin-right: 30px;
+
+        &:nth-child(4n) {
+            margin-right: 0px
+        }
+
+        &:hover,
+        &:focus {
+            background:$secondary-textcolor;
+            box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+            border-radius: 0px 0px 4px 4px;
+        }
+
+    .profile-card {
+        margin-top: 0;
+        width: 270px;
+        height: 422px;
+        
+        border: 1px solid $secondary-backgroundcolor;
+        box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+        border-radius: 0px 0px 4px 4px;
+        background-color: $primary-backgroundcolor;
+
+        h3 {
+            margin-top: 30px;
+            margin-bottom: 0;
+
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.19;   
+        }
+
+        p {
+            margin-top: 10px;
+            margin-bottom: 0;
+
+            font-size: 16px;
+            line-height: 1.19;
+            color: $thirdly-textcolor; 
+        }
+
+        .team-member {
+            display: block;
+        }
+
+    }
+}
+
+.item-card {
+    .social-items {
+        display: $display;
+        justify-content: center;
+        margin-top: 16px;
+        margin-bottom: 24px;
+
+        .social-link {
+            display: block;
+            height: 44px;
+            width: 44px;
+            color: #AFB1B8;
+            border-radius: 0;
+            transition: color 250ms $timing-function,
+            background-color 250ms $timing-function,
+            border-radius 250ms $timing-function;
+
+                .icon {
+                    height: 20px;
+                    width: 20px;
+                    margin-top: 12px;
+                    margin-right: 10px;
+                    fill: currentColor;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }        
+                }
+            &:hover,
+            &:focus {
+                background-color: $accent-color;
+                border-radius: 50%;
+                color:$secondary-textcolor; 
+            }
+        }
+    }
+}
+
+//Clients
