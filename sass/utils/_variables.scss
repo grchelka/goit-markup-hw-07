@@ -13,6 +13,7 @@ $accent-color: #2196F3;
 
 $display: flex;
 $items: "details", "punctuality", "planning", "moderntech"; 
+$icons: "instagram", "twitter", "facebook", "linkedin";
 
 $primary-backgroundcolor: #FFFFFF;
 $secondary-backgroundcolor: #F5F4FA;
@@ -22,4 +23,7 @@ $transition-delay: 250ms;
 $timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 
-
+$instagram: url(../images/instagram.png);
+$twitter: url(../images/twitter.png);
+$facebook: url(../images/facebook.png);
+$linkedin: url(../images/linkedin.png);

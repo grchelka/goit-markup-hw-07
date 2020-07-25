@@ -8,8 +8,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="css/main.min.css" />
 </head>
 
 <body>
@@ -17,7 +16,7 @@
     <header>
         <nav class="header-container">
             <a href="./index.html" class="logo">
-                Web <span class="logo-header">Studio</span>
+                Web <span class="accent">Studio</span>
             </a>
 
             <ul class="nav-links">
@@ -27,12 +26,12 @@
             </ul>
 
             <div class="nav-contacts">
-                <a href="mailto:info@devstudio.com">
+                <a class="contact" href="mailto:info@devstudio.com">
                     <svg class="email" width="16" height="11">
                         <use href="./images/header-defs.svg#icon-envelope"></use>
                     </svg>
                     info@devstudio.com</a>
-                <a href="tel:+380961111111">
+                <a class="contact" href="tel:+380961111111">
                     <svg class="phone" width="10" height="15">
                         <use href="./images/header-defs.svg#icon-phone"></use>
                     </svg>
@@ -198,7 +197,7 @@
                     </address>
 
                     <a class="mail-block" href="mailto:info@example.com">info@example.com</a>
-                    <a href="tel:++380991111111">+38 099 111 11 11</a>
+                    <a class="tel-block" href="tel:++380991111111">+38 099 111 11 11</a>
                 </div>
             </div>
 
@@ -224,7 +223,7 @@
                 <p>Подпишитесь на рассылку</p>
                 <form id="subscribe-form" method="post" action="/">
                     <input class="user-email" type="text" placeholder="E-mail" name="email">
-                    <button class="submit-button" type="submit">Подписаться
+                    <button class="footer-button" type="submit">Подписаться
                         <svg class="icon-send">
                             <use href="./images/footer-sprite.svg#icon-send"></use>
                         </svg>

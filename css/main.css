@@ -590,10 +590,82 @@ body {
   outline: none;
 }
 
-.modal {
+.footer-button {
+  position: absolute;
+  margin-left: 12px;
+  width: 200px;
+  height: 50px;
+  outline: none;
+  border-color: transparent;
+  cursor: pointer;
+  background: #2196F3;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.9;
+  padding-right: 40px;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+}
+
+.footer-button .icon-send {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+
+.radio-button a {
+  display: block;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  padding-right: 22px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  color: #212121;
+  background-color: #F5F4FA;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.radio-button a:not(:last-child) {
+  margin-right: 8px;
+}
+
+.radio-button a:hover, .radio-button a:focus {
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
+  color: #FFFFFF;
+  background-color: #2196F3;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop .modal {
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 2;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 528px;
@@ -605,7 +677,7 @@ body {
   border-radius: 4px;
 }
 
-.modal-heading {
+.backdrop .modal-heading {
   margin: 0;
   font-weight: bold;
   font-size: 20px;
@@ -613,7 +685,7 @@ body {
   text-align: center;
 }
 
-.modal .close-button {
+.backdrop .modal .close-button {
   position: absolute;
   top: 0;
   right: 0;
@@ -741,9 +813,136 @@ body {
   outline: none;
 }
 
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
+.footer {
+  padding-top: 45px;
+  padding-bottom: 21px;
+  background-color: #2F303A;
+}
+
+.footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 214px;
+  margin-right: 216px;
+  margin-bottom: 46px;
+}
+
+.footer-container .address {
+  margin-right: 69px;
+}
+
+.footer-container .join-list {
+  margin-right: 94px;
+}
+
+.footer-container .mail-out {
+  position: relative;
+}
+
+.footer p {
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.footer .page-authors {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 645px;
+  margin-right: 645px;
+  font-size: 12px;
+  line-height: 2;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.address .logo {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.address .logo-footer {
+  color: #FFFFFF;
+}
+
+.address .footer-contacts {
+  line-height: 1.7;
+}
+
+.address .footer-contacts .adress-block {
+  margin-bottom: 9px;
+  color: #FFFFFF;
+}
+
+.address .footer-contacts .mail-block,
+.address .footer-contacts .tel-block {
+  display: block;
+  margin-bottom: 9px;
+  color: rgba(255, 255, 255, 0.6);
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address .footer-contacts .mail-block:hover, .address .footer-contacts .mail-block:focus,
+.address .footer-contacts .tel-block:hover,
+.address .footer-contacts .tel-block:focus {
+  color: #2196F3;
+}
+
+.join-list .social-net {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.join-list .social-net .social-link {
+  display: block;
+  margin-right: 10px;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.join-list .social-net .social-link:hover, .join-list .social-net .social-link:focus {
+  background-color: #2196F3;
+}
+
+.join-list .social-net .instagram {
+  background-image: url(../images/instagram.png);
+}
+
+.join-list .social-net .twitter {
+  background-image: url(../images/twitter.png);
+}
+
+.join-list .social-net .facebook {
+  background-image: url(../images/facebook.png);
+}
+
+.join-list .social-net .linkedin {
+  background-image: url(../images/linkedin.png);
+}
+
+.user-email {
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  background: #2F303A;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 .jumbotron-wrapper {
@@ -1002,5 +1201,190 @@ body {
   background-color: #2196F3;
   border-radius: 50%;
   color: #FFFFFF;
+}
+
+.clients {
+  margin-bottom: 94px;
+  width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+}
+
+.clients-title {
+  padding-top: 94px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.clients-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.client-page {
+  display: block;
+  width: 170px;
+  height: 90px;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+  margin-right: 30px;
+  padding-top: 21px;
+  color: #AFB1B8;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.client-page .icon-client {
+  width: 45px;
+  height: 50px;
+  fill: currentColor;
+}
+
+.client-page .icon-peters {
+  width: 80px;
+  height: 42px;
+  fill: currentColor;
+}
+
+.client-page .icon-tangline {
+  width: 89px;
+  height: 45px;
+  fill: currentColor;
+}
+
+.client-page:hover, .client-page:focus {
+  border: 1px solid #2196F3;
+  color: #2196F3;
+}
+
+.examples {
+  margin-top: 126px;
+  margin-bottom: 94px;
+}
+
+.examples .radio-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 50px;
+}
+
+.examples .radio-button .portfolio {
+  width: 73px;
+  height: 38px;
+}
+
+.examples .radio-button .websites {
+  width: 128px;
+  height: 38px;
+}
+
+.examples .radio-button .applications {
+  width: 145px;
+  height: 38px;
+}
+
+.examples .radio-button .design {
+  width: 103px;
+  height: 38px;
+}
+
+.examples .radio-button .marketing {
+  width: 130px;
+  height: 38px;
+}
+
+.examples .examples-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.examples .examples-list h2 {
+  margin-left: 24px;
+  margin-left: 24px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: #212121;
+}
+
+.examples .examples-list p {
+  margin-left: 24px;
+  font-size: 16px;
+  line-height: 1.9;
+  color: #757575;
+}
+
+.portfolio-card {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+  border: 1px solid transparent;
+}
+
+.portfolio-card:nth-child(3n) {
+  margin-right: 0px;
+}
+
+.portfolio-card:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+.portfolio-card .item-img {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-card .popup-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  padding: 63px 24px;
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #FFFFFF;
+  background-color: #2196F3;
+}
+
+.portfolio-card:hover, .portfolio-card:focus {
+  border: 1px solid #EEEEEE;
+  -webkit-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+          box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-card:hover .popup-text {
+  opacity: 1;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 /*# sourceMappingURL=main.css.map */
